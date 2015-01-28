@@ -42,7 +42,7 @@ $(document).ready(function(){
 	//Close Left Sidebar//
 	//////////////////////
 
-    $(".close-sidebar-left, .close-bottom-left, .content-box").click(function(){        
+    $(".close-sidebar-left, .close-bottom-left, .content-box, .header").click(function(){        
         $('.sidebar-left').animate({
             left: '-270px',
         }, 300, 'easeInOutExpo', function () {});

@@ -42,7 +42,7 @@
         </div>
 
         <div class="content-box shadow">
-            test
+            
         </div>
         
         <div class="sidebar-left">
