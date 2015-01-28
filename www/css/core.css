@@ -349,51 +349,43 @@ input {
 	text-transform:uppercase;
 }
 
-
-.lab_item {
-    display: inline-block;
-    height: 230px;
+.login-container {
+    background-color: white;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 360px;
+    margin: 200px auto;
     position: relative;
-    width: 200px;
+    background-color: white;
+    -o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
 }
-.hexagon2 {
-    height: 100%;
-    position: absolute;
-    top: -85px;
-    width: 100%;
+
+.register-container, .password-container {
+    background-color: white;
+    padding-bottom: 25px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 360px;
+    margin: 0 auto;
+    position: relative;
+    background-color: white;
+    -o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;   
 }
-.hexagon {
-    cursor: pointer;
-    overflow: hidden;
-    transform: rotate(120deg);
-    visibility: hidden;
-}
-@media (max-width: 1200px) {
-.lab_item {
-    height: 180px;
-    width: 150px;
-}
-}
-@media (max-width: 992px) {
-.lab_item {
-    height: 150px;
-    width: 120px;
-}
-}
-.hexagon-in1 {
-    height: 100%;
-    overflow: hidden;
-    transform: rotate(-60deg);
-    width: 100%;
-}
-.hexagon-in2 {
-    background-position: 50% center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    height: 100%;
-    overflow: hidden;
-    transform: rotate(-60deg);
-    transition: all 0.5s ease 0s;
-    visibility: visible;
-    width: 100%;
+
+
+border-radius-0 {
+    border-radius: 0px;   
 }
