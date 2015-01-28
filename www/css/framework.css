@@ -23,12 +23,17 @@ body {
 	padding: 0;
 	line-height: 18px;
     height: 100%;
+    width: 100%;
     background-color: #1abc9c;
 }
 
 ::selection {
 	background-color: none;
 	color: #fff;
+}
+
+.sidebar-left a {
+    display: block;   
 }
 
 a:hover {
