@@ -58,14 +58,6 @@ $(document).ready(function(){
     });
 });
 
-$(function(){
-    var get_storage = window.localStorage.getItem("login");
-    if(get_storage == 'login_success'){
-        window.location.href = "dashboard.html";    
-    }
-});
-
-
 
 
 
