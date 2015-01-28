@@ -1,0 +1,350 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
+
+.top-logo{
+	position:relative;
+	top:-32px;
+	width:125px; /*Change with your logo's width*/
+	margin-left:auto;
+	margin-right:auto;
+	z-index:99999;
+}
+
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.content-box{
+	background-image:url(../img/body-bg.png);
+	background-repeat:repeat;
+	z-index:10;
+	padding-top:70px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 70px;
+}
+
+.header{
+	z-index:9999;
+	position:fixed;
+	width:100%;
+	background-color:#FFFFFF;
+	height:50px;
+	border-bottom:solid 1px #f9fafc;
+	-webkit-box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 		0px 2px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.deploy-left-sidebar{
+	background-image:url(../images/misc/nav.png);
+	background-repeat:no-repeat;
+	background-color:#f9fafc;
+	height:50px;
+	width:50px;
+	background-position:center center;
+}
+
+.deploy-left-sidebar i {
+    color: #000;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    color: grey;
+}
+
+.deploy-back-home{
+	background-image:url(../images/misc/home.png);
+	background-repeat:no-repeat;
+	background-color:#f9fafc;
+	width:50px;
+	height:50px;
+	background-position:center center;
+	float:right;
+	margin-top:-50px;
+}
+
+.sidebar-left{
+	box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.3);
+	background-image:url(../img/sidebar-bg.png);
+	background-repeat:repeat;
+	width:270px;
+	position:fixed;
+	z-index:99999;
+	top:0px;
+	left:-270px;
+	bottom:0px;
+	overflow:hidden;
+	position:fixed;
+}
+
+.sidebar-scroll-left{
+	padding-right:20px;
+	left:0px;
+	width:310px;
+	overflow: scroll!important;
+	overflow-x:hidden!important;
+	-webkit-overflow-scroll:touch!important;	
+	height:100%;
+}
+
+.sidebar-decoration{
+	background-image:url(../images/misc/sidebar-deco.png);
+	background-repeat:repeat-x;
+	height:2px;	
+	margin-bottom:15px;
+}
+
+.sidebar-header-left{
+	height:51px;
+	background-color:#1d1f22;
+	border-bottom:solid 1px #141719;
+}
+
+.sidebar-left-logo{	
+	position:absolute;
+	top:18px;
+	left:20px;
+}
+
+.sidebar-divider-text{
+	color:#FFFFFF;
+	font-size:10px;
+	font-weight:700;
+	font-family:'Lato', sans-serif;
+	padding-top:15px;
+	padding-left:15px;
+	margin-bottom:15px;
+}
+
+.nav-item:hover{
+	background-color:#212326;
+}
+
+.nav-item{
+	-webkit-tap-highlight-color: rgba(0,0,0,0); 
+	font-family:'Lato', sans-serif;
+	background-size:20px 20px;	
+	background-color:#1d1f22;
+	text-shadow:0px 2px 0px rgba(0,0,0,1);
+	font-size:12px;
+	font-weight:700;
+	color:#d2d2d2;
+	height:50px;
+	line-height:49px;
+	background-repeat:no-repeat;
+	padding-left:25px;
+	background-position:20px center;
+	border-bottom:solid 1px #141719;
+	border-top:solid 1px #25272a;
+}
+
+.nav-item i {
+    margin-right: 20px;   
+}
+
+.icon-active{
+	position:absolute;
+	background-image:url(../images/misc/left-sidebar/location@2x.png);
+	background-size:10px 15px;
+	background-repeat:no-repeat;
+	display:block;
+	width:10px;
+	height:15px;
+	top:19px;
+	left:240px;
+}
+
+
+.icon-page{
+	position:absolute;
+	background-image:url(../images/misc/left-sidebar/gopage@2x.png);
+	background-size:8px 11px;
+	background-repeat:no-repeat;
+	display:block;
+	width:10px;
+	height:15px;
+	top:19px;
+	left:240px;
+}
+
+.icon-drop{
+	position:absolute;
+	background-image:url(../images/misc/left-sidebar/godrop@2x.png);
+	background-size:11px 8px;
+	background-repeat:no-repeat;
+	display:block;
+	width:10px;
+	height:15px;
+	top:19px;
+	left:239px;
+}
+
+.submenu a{
+	text-shadow:0px 2px 0px rgba(0,0,0,1);
+	background-image:url(../images/misc/sidebar-deco.png);
+	background-repeat:repeat-x;
+	padding-top:12px;
+	padding-bottom:12px;
+	padding-left:25px;
+	font-size:10px;
+	color:#878787;
+	text-transform:uppercase;
+	font-family:'Lato', sans-serif;
+	font-weight:900;
+}
+
+.submenu a em{
+	background-image:url(../images/misc/left-sidebar/gopage@2x.png);
+	background-size:8px 11px;
+	background-repeat:no-repeat;
+	float:left;
+	width:10px;
+	height:15px;
+	display:block;
+	margin-top:5px;
+	padding-right:35px;
+}
+
+.submenu a:first-child{
+	background-image:none!important;
+}
+
+
+.submenu{
+	display:none;
+}
+
+.submenu-active{
+	display:block;
+}
+
+.nav-item-active{
+	color:#FFFFFF!important;
+}
+
+.sidebar-notifications a {
+	margin-bottom:15px;
+	background-repeat:no-repeat;
+	background-position:0 center;
+	margin-left:20px;
+	font-size:10px;
+	color:#878787;
+	font-family:'Lato', sans-serif;
+	font-weight:700;
+	text-transform:uppercase;
+	line-height:10px;
+}
+
+.sidebar-bottom-controls{
+	background-color:#1d1f22;
+}
+
+.sidebar-bottom-controls a p{
+	margin-bottom:2px;
+	font-size:10px;
+	font-family:'Lato', sans-serif;
+	color:#878787;
+}
+
+.sidebar-bottom-controls a{
+	background-image:url(../images/misc/sidebar-deco-vertical.png);
+	background-repeat:repeat-y;
+	font-size:10px;
+	text-align:center;
+	float:left;
+	width:32%;
+	text-transform:uppercase;
+	color:#FFFFFF;
+	line-height:10px;	
+	border-top:solid 1px #25272a;
+	display:block;
+}
+
+.twitter-bottom{
+	display:block;
+	background-image:url(../images/icon/social/twitter.png);
+	background-repeat:no-repeat;
+	background-position:center 33px;
+	background-size:16px 16px;
+	height:50px;
+	margin-top:-25px;
+}
+
+.facebook-bottom{
+	display:block;
+	padding-top:26px;
+	background-image:url(../images/icon/social/facebook.png);
+	background-repeat:no-repeat;
+	background-position:center 33px;
+	background-size:16px 16px;
+	height:50px;
+	margin-top:-25px;
+}
+
+.close-bottom-left{
+	display:block;
+	padding-top:26px;
+	background-image:url(../images/icon/misc/accessdenied.png);
+	background-repeat:no-repeat;
+	background-position:center 33px;
+	background-size:16px 16px;
+	height:50px;
+	margin-top:-25px;
+}
+
+.close-bottom-right{
+	display:block;
+	padding-top:26px;
+	background-image:url(../images/icon/misc/accessdenied.png);
+	background-repeat:no-repeat;
+	background-position:center 33px;
+	background-size:16px 16px;
+	height:50px;
+	margin-top:-25px;
+}
+
+
+
+/*Sidebar RIght Styles*/
+
+.sidebar-header-right{
+	height:50px;
+	background-color:#1d1f22;
+	border-bottom:solid 1px #141719;
+}
+
+
+.sidebar-right-logo{	
+	position:absolute;
+	top:18px;
+	right:40px;
+}
+
+.close-sidebar-right{
+	background-color:#212326;
+	background-image:url(../images/icon/misc/accessdenied.png);
+	background-size:17px 17px;
+	background-repeat:no-repeat;
+	background-position:16px 18px;
+	height:50px;
+	width:50px;
+	margin-left:0px;
+	display:block;
+}
+
+.right-sidebar-copyright{
+	margin-top:20px;
+}
+
+.footer-text a{
+	padding-top:10px;
+	font-size:10px;
+	color:#8a8a8a;
+}
+
+.copyright-sidebar{
+	font-size:10px;
+	padding-left: 30px;
+	text-transform:uppercase;
+}
