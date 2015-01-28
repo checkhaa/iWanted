@@ -1,29 +1,113 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title></title>
+    </head>
+    <body>
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <div id="preloader">
+        <div id="status">
+            <p class="center-text">
+                wird geladen...
+                <em>Die Ladegeschwindigkeit hängt von Ihrer Internetverbindung ab</em>
+            </p>
+        </div>
+    </div>
+        
+        <div class="header">
+            <a href="#" class="deploy-left-sidebar"></a>
+            <a href="#" class="deploy-right-sidebar"></a>
+            <a href="#" class="top-logo"><img src="images/misc/logo.png" class="replace-2x" width="125" alt="img" /></a>
+        </div>
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
-
-    <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-
-    <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
-
-    <!-- your app's js -->
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-  </head>
-
-  <body ng-app="starter">
-      <ion-nav-view></ion-nav-view>
-  </body>
+        <div class="content-box shadow">
+            CONTENT
+        </div>
+        
+        <div class="sidebar-left">
+            <div class="sidebar-scroll-left">
+                <div class="sidebar-header-left">
+                    <img src="images/misc/logo-sidebar.png" class="sidebar-left-logo replace-2x" width="125" alt="img" />
+                    <a href="#" class="close-sidebar-left"></a>
+                </div>
+                
+                <p class="sidebar-divider-text">NAVIGATION</p>
+                <a href="#" class="nav-item coach-nav">WALKTHROUGH<em class="icon-page"></em></a>
+                <a href="index.html" class="nav-item home-nav">HOMEPAGE<em class="icon-active"></em></a>
+                <a href="#" id="submenu-one" class="nav-item info-nav">FEATURES<em class="icon-drop"></em></a>
+                <div class="submenu submenu-one">
+                    <a href="intro.html"><em></em>Introduction</a>
+                    <a href="type.html"><em></em>Typography</a>
+                    <a href="jquery.html"><em></em>jQuery</a>
+                    <a href="other.html"><em></em>Others</a>
+                    <a href="touch.html"><em></em>Touch</a>
+                </div>
+                <a href="#" id="submenu-two" class="nav-item folio-nav">FOLIOS<em class="icon-drop"></em></a>
+                <div class="submenu submenu-two">
+                    <a href="ffolio.html"><em></em>Full Column</a>
+                    <a href="onecol.html"><em></em>One Column</a>
+                    <a href="twocol.html"><em></em>Two Columns</a>
+                    <a href="swiper.html"><em></em>Swipables</a>
+                    <a href="filter.html"><em></em>Filter</a>
+                </div>
+                <a href="video.html" class="nav-item video-nav">VIDEOS<em class="icon-page"></em></a>
+                <a href="blog.html" class="nav-item blog-nav">BLOG<em class="icon-page"></em></a>
+                <a href="contact.html" class="nav-item mail-nav">CONTACT<em class="icon-page"></em></a>   
+                
+                <p class="sidebar-divider-text">NOTIFICATIONS</p>
+                <div class="sidebar-decoration"></div>
+                
+                <div class="sidebar-notifications">
+                    <a href="#" class="info-sidebar">
+                        New Item Released<br />
+                        15th April 2013
+                    </a>
+                    
+                    <div class="sidebar-decoration"></div>
+                    <a href="#" class="update-sidebar">
+                        New Item Released<br />
+                        15th April 2013
+                    </a>
+                    
+                    <div class="sidebar-decoration"></div>
+                    <a href="#" class="folio-sidebar">
+                        New Item Released<br />
+                        15th April 2013
+                    </a>        
+                </div>
+                
+                <div class="sidebar-decoration"></div>
+                <p class="copyright-sidebar">Copyright 2013. All rights reserved!</p>
+                
+                <div class="sidebar-bottom-controls">
+                    <a href="#">
+                        <em class="twitter-bottom"></em>
+                        <p>Twitter</p>
+                    </a>
+                    <a href="#">
+                        <em class="facebook-bottom"></em>
+                        <p>Facebook</p>
+                    </a>
+                    <a href="#">
+                        <em class="close-bottom-left"></em>
+                        <p>Collapse</p>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>       
+        
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
 </html>
