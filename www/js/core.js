@@ -46,7 +46,7 @@ $(document).ready(function(){
                 var success_login = 'login_success';
                 window.localStorage.setItem('user_name', uname); 
                 window.localStorage.setItem('login', success_login);
-                window.location.href = "/page/page.dashboard.html";
+                window.location.href = "page/page.dashboard.html";
             } else if(result == 'FALSE'){
                 $('#output').html('<div class="alert alert-danger"><strong>Benutzername oder Passwort falsch!</strong> Versuchen Sie es erneut</div>');   
             }
