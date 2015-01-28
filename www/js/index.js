@@ -14,7 +14,9 @@ var app = {
 
     receivedEvent: function(id) {
         $(function(){
-            $('#loged_sidebar').load( "tpl/tpl.login.html"); 
+            $.get('tpl/tpl.login.html', function(result){
+               $('#loged_sidebar').html(result);  
+            });
         });
     }
 };

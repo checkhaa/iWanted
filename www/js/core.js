@@ -37,9 +37,7 @@ $(document).ready(function(){
         .success(function(result){
             // Wenn richtig eingeloggt Setze Storage und zeige die Maske nach dem erfolgreichem Login
             if(result == 'TRUE'){
-                var success_login = 'login_success';
                 window.localStorage.setItem('user_name', uname); 
-                window.localStorage.setItem('login', success_login);
                 
                 // Login Maske ausblenden
                 $('div#loged_out').remove();
