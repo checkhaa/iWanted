@@ -46,7 +46,9 @@ $(document).ready(function(){
                 $('div#loged_in').fadeIn();
                 
                 // Sidebar laden
-                $('#loged_sidebar').load( "tpl/tpl.sidebar.html");
+                $.get('tpl/tpl.sidebar.html', function(result){
+                    $('#loged_sidebar').html(result);  
+                });
                 
             } else if(result == 'FALSE'){
                 $('#output').html('<div class="alert alert-danger"><strong>Benutzername oder Passwort falsch!</strong> Versuchen Sie es erneut</div>');   

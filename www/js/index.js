@@ -15,7 +15,7 @@ var app = {
     receivedEvent: function(id) {
         $(function(){
             $.get('tpl/tpl.login.html', function(result){
-               $('#loged_sidebar').html(result);  
+               $('#loged_out').html(result);  
             });
         });
     }
