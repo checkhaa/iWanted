@@ -33,19 +33,8 @@ var app = {
         }
         
         if(id == 'backbutton'){
-            // navigate to a tab when the history changes
-            window.addEventListener("popstate", function(e) {
-                // Ignore inital popstate that some browsers fire on page load
-                var returnLocation = history.location || document.location;
-                var last_page = returnLocation.hash.replace('#', '');
 
-                // Seite holen
-                $.get('tpl/tpl.'+last_page+'.html', function(page){
-                    $('#loged_container').html(page);
-                });
-
-                return false;
-            });            
         }
+        
     }
 };

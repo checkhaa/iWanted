@@ -43,19 +43,16 @@ $(document).ready(function(){
         return false;
     });
     
-    // navigate to a tab when the history changes
-    window.addEventListener("popstate", function(e) {
+    window.onpopstate = function(event) {         
         // Ignore inital popstate that some browsers fire on page load
         var returnLocation = history.location || document.location;
         var last_page = returnLocation.hash.replace('#', '');
-
+        alert(last_page);
         // Seite holen
         $.get('tpl/tpl.'+last_page+'.html', function(page){
             $('#loged_container').html(page);
         });
-        
-        return false;
-    });
+    }
     
     $('button#login').on('click', function() {
         var $btn = $(this).button('loading')
