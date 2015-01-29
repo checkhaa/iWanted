@@ -1,17 +1,63 @@
+<!-- Grundgerüst Für die Gespeicherten Anzeigen -->
+<div id="modal-page-show-adverts" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content"></div>
+    </div>
+</div>
+<!-- Grundgerüst für die Gepseicherten Anzeigen Ende -->
+
+
+<!-- Content Abrufen -->
 <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	<h4>Anzeige Suchen</h4>
-    <hr />
+    <i class="fa fa-chevron-left close" data-dismiss="modal"></i>
+    <div class="modal_show_title">Anzeige Suchen</div>
 </div>
 <div class="modal-body">
-	<div class="list-advert-category"></div>
+	<div class="content-white">
+        <h4>Kategorie</h4>
+        <hr />
+        <form id="search_advert">
+            <div class="list-advert-category"></div>
+            <button id="search_advert" class="btn btn-success">JETZT FINDEN</button>
+        </form>
+    </div>
 </div>
+<!-- Content Abrufen Ende -->
+
+<!-- Javascript Datei response -->
 <script>
 $(function(){
+    // Beim Laden des Models Kategorien Variable Setzen
     var data_category = 'list_advert_category=true';
+    
+    // Über Response vom Webserver Daten holen
     $.post('http://wanted.setcode.de/scripts/get_advert.php', data_category)
+    
+    // Wenn Daten erfolgreich übermittelt worden Zeige den Inhalt im search_advert div
     .success(function(result_category){
         $('div.list-advert-category').html(result_category);
-    }); 
+        $('#search_advert').fadeIn(0);
+    });
+    
+    // Wenn auf Jetzt Finden geklickt wird, zweite Modal von Anzeigen öffnen und Inhalte aus dem Template in modal-content laden
+    $('button#search_advert').click(function(){
+        $('#modal-page-show-adverts').modal('show');
+        $('#modal-page-show-adverts .modal-content').load('tpl/tpl.advert_show.html');
+        
+        // Über die Form Input Felder holen
+        var data_form = $('form#search_advert').serialize();
+        var data_advert = 'list_advert=true&'+data_form;
+        
+        // Über Response vom Webserver die Anzeigen holen
+        $.post('http://wanted.setcode.de/scripts/get_advert.php', data_advert)
+        
+        // Wenn Datenübermittlung erfolgreich dann im show_advert_modal_inside die Daten anzeigen
+        .success(function(result_advert){
+            $('#show_advert_modal_inside').html(result_advert);   
+        });
+                 
+        return false;
+    });
 });
 </script>
+<!--- Javascript Datei response Ende -->
