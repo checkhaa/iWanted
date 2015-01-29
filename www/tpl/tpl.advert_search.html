@@ -2,5 +2,15 @@
     <div class="content-white">
         <h4>Anzeige Suchen</h4>
         <hr />
+        <div class="list-advert-category"></div>
     </div>
 </div>
+<script>
+$(function(){
+    var data_category = 'list_advert_category=true';
+    $.post('http://wanted.setcode.de/scripts/get_advert.php', data_category)
+    .success(function(result_category){
+        $('div.list-advert-category').html(result_category);
+    }); 
+});
+</script>

@@ -15,9 +15,9 @@
 	z-index:99999;
 }
 
-input {
-    -webkit-appearance: none;
-    border-radius: 0;
+input[type=checkbox], input[type=radio] {
+    margin: 1px 0 0;
+    line-height: normal;
 }
 
 .content-box{
