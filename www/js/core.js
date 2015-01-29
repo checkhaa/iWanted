@@ -18,7 +18,7 @@ $(document).ready(function(){
         return false;
     });
 
-    $(".close-sidebar-left, .close-bottom-left, .container").on('click', function(){
+    $(".close-sidebar-left, .close-bottom-left, .container, .loged_in").on('click', function(){
         $('.sidebar-left').animate({
             left: '-270px',
         }, 500, 'easeInOutExpo', function () {});
