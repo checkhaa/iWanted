@@ -1,15 +1,14 @@
 $(document).ready(function(){
 	
-	$('#submenu-one').click(function(){	$('.submenu-one').toggle(300);	});
-	$('#submenu-two').click(function(){	$('.submenu-two').toggle(300);	});    
-    
-	$('.deploy-left-sidebar, .close-sidebar-left, .header, .close-bottom-left, .close-bottom-right').click(function(){	
-        return false;	
+    $('#submenu-one').on('click', function(){
+        $('.submenu-one').toggle(300);   
     });
-
     
-    $(".deploy-left-sidebar, .header").click(function(){
-        $('.header').addClass('close_nav');
+    $('#submenu-two').on('click', function(){
+        $('.submenu-two').toggle(300);   
+    });
+    
+    $(".header").on('click', function(){
         $('.sidebar-left').animate({
             left: '0',
         }, 500, 'easeOutExpo', function () {});
@@ -19,44 +18,51 @@ $(document).ready(function(){
         return false;
     });
 
-    $(".close-sidebar-left, .close-bottom-left, .container").click(function(){
-        $('.header').removeClass('close_nav');
+    $(".close-sidebar-left, .close-bottom-left, .container, .sidebar-left a").on('click', function(){
         $('.sidebar-left').animate({
             left: '-270px',
         }, 500, 'easeInOutExpo', function () {});
         return false;
     });
     
-    $('button#login').click(function(){
+    $('.sidebar-left a').on('click', function(){
+        var get_page = $(this).attr('href').replace('#', '')
+        
+        $('div#loged_container' ).load( 'tpl/tpl.'+get_page+'.html' );
+
+    });
+    
+    $('button#login').on('click', function() {
         var $btn = $(this).button('loading')
         var uname = $('input#user_name').val();
         var pwd = $('input#user_pwd').val();
         var dataString = 'login=true&user_name='+uname+'&user_pwd='+pwd;
-        
+
         $.post('http://wanted.setcode.de/scripts/login.php', dataString)
         .success(function(result){
             // Wenn richtig eingeloggt Setze Storage und zeige die Maske nach dem erfolgreichem Login
             if(result == 'TRUE'){
-                window.localStorage.setItem('user_name', uname); 
-                
+                $.cookie('username', uname, { expires: 14 });
+                $.cookie('login', true, { expires: 14 });
+
                 // Login Maske ausblenden
                 $('div#loged_out').remove();
-                
+
                 // Eingeloggte Maske anzeigen
                 $('div#loged_in').fadeIn();
-                
+
                 // Sidebar laden
                 $.get('tpl/tpl.sidebar.html', function(result){
                     $('#loged_sidebar').html(result);  
                 });
-                
+
             } else if(result == 'FALSE'){
                 $('#output').html('<div class="alert alert-danger"><strong>Benutzername oder Passwort falsch!</strong> Versuchen Sie es erneut</div>');   
             }
-            
+
             $btn.button('reset')
         });
-        
+
         return false;
     });
 });

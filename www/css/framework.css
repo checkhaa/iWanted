@@ -29,14 +29,18 @@ body {
 
 ::selection {
 	background-color: none;
-	color: #fff;
 }
 
 .sidebar-left a {
     display: block;   
 }
 
-a:hover {
+.sidebar-left a:hover {
+    text-decoration: none;
+    color: #1abc9c;
+}
+
+.sidebar-left a:focus {
     text-decoration: none;
     color: #1abc9c;
 }

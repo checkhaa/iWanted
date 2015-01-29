@@ -14,9 +14,14 @@ var app = {
 
     receivedEvent: function(id) {
         $(function(){
-            $.get('tpl/tpl.login.html', function(result){
-               $('#loged_out').html(result);  
-            });
+            var login_cookie = $.cookie('login');
+            if (login_cookie == true) {            
+                alert(1);
+            } else {
+                $.get('tpl/tpl.login.html', function(result){
+                    $('#loged_out').html(result);  
+                });
+            }
         });
     }
 };
