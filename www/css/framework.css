@@ -1340,11 +1340,6 @@ table tr:hover td{
 
 /*Sidebar Form*/
 
-input {
-    -webkit-appearance: none;
-    border-radius: 0;
-}
-
 textarea {
     -webkit-appearance: none;
     border-radius: 0;
