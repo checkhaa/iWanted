@@ -26,34 +26,12 @@ $(document).ready(function(){
     });
     
     $('.sidebar-left a').on('click', function(){
-        var get_page = $(this).attr('href').replace('#', '')
-        if(get_page != ''){
-            // Seite holen
-            $.get('tpl/tpl.'+get_page+'.html', function(page){
-                $('.sidebar-left').animate({
-                    left: '-270px',
-                }, 500, 'easeInOutExpo', function () {});
-                
-                $('#loged_container').html(page);
-            });
-            
-            // HISTORY.PUSHSTATE
-            history.pushState(null, null, $(this).attr('href'));
-        }
-        return false;
+        $('.sidebar-left').animate({
+            left: '-270px',
+        }, 500, 'easeInOutExpo', function () {});
     });
     
-    window.onpopstate = function(event) {         
-        // Ignore inital popstate that some browsers fire on page load
-        var returnLocation = history.location || document.location;
-        var last_page = returnLocation.hash.replace('#', '');
-        alert(last_page);
-        // Seite holen
-        $.get('tpl/tpl.'+last_page+'.html', function(page){
-            $('#loged_container').html(page);
-        });
-    }
-    
+
     $('button#login').on('click', function() {
         var $btn = $(this).button('loading')
         var uname = $('input#user_name').val();
