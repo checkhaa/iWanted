@@ -34,10 +34,10 @@ $(document).ready(function(){
                 $('.sidebar-left').animate({
                     left: '-270px',
                 }, 500, 'easeInOutExpo', function () {});
-                return false;
                 $('#loged_container').html(page);
             });
         }
+        return false;
     });
     
     $('button#login').on('click', function() {
