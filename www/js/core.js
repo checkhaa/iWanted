@@ -27,16 +27,33 @@ $(document).ready(function(){
     
     $('.sidebar-left a').on('click', function(){
         var get_page = $(this).attr('href').replace('#', '')
-        
         if(get_page != ''){
             // Seite holen
             $.get('tpl/tpl.'+get_page+'.html', function(page){
                 $('.sidebar-left').animate({
                     left: '-270px',
                 }, 500, 'easeInOutExpo', function () {});
+                
                 $('#loged_container').html(page);
             });
+            
+            // HISTORY.PUSHSTATE
+            history.pushState(null, null, $(this).attr('href'));
         }
+        return false;
+    });
+    
+    // navigate to a tab when the history changes
+    window.addEventListener("popstate", function(e) {
+        // Ignore inital popstate that some browsers fire on page load
+        var returnLocation = history.location || document.location;
+        var last_page = returnLocation.hash.replace('#', '');
+
+        // Seite holen
+        $.get('tpl/tpl.'+last_page+'.html', function(page){
+            $('#loged_container').html(page);
+        });
+        
         return false;
     });
     
